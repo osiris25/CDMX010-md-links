@@ -1,4 +1,16 @@
 {
-  "name": "md-links",
-  "version": "0.1.0"
+	"name": "md-links",
+	"version": "0.1.0",
+	"description": "Verifica los links",
+	"entry point": "index.js",
+	"scripts": {
+		"start": "node index.js"
+	},
+	"author": {
+		"name": "Wendy Osiris Rivas Martinez",
+		"email": "wendyosi25@gmail.com"
+	},
+	"dependencies": {
+		"markdown-it": "^12.0.4"
+	}
 }
