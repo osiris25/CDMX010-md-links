@@ -9,6 +9,7 @@ module.exports=statistics =(urlArray)=>{
 		const linksInvalidos = [];
 		let linkValidated = [];
 		urlArray.forEach(element => {
+
 		linkValidated.push(peticionFetch(element));
 	  });
 

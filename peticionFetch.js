@@ -17,4 +17,5 @@ const peticionFetch = (url) => {
 	return fetchP;
 
 }
+
 module.exports=peticionFetch;
