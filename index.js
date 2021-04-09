@@ -1,10 +1,9 @@
+
 const readArchives = require('./readArchives');
 const fs = require('fs');
 const path = require('path');
 
-/* module.exports =  */
-const readDirectory = (archive) => {
-
+ const mdLinks = (archive) => {
 	fs.readdir(archive, (error, files) => {
 		if (error) {
 		} else {
@@ -15,11 +14,11 @@ const readDirectory = (archive) => {
 				if (extNamePath === '.md') {
 					readArchives(newPath);
 				} else if (extNamePath === '') {
-					readDirectory(newPath);
+					mdLinks(newPath);
 				}
 			});
-			//console.log(files);
+			console.log(files);
 		}
 	});
 }
-readDirectory('./Directorio1');
+module.exports=mdLinks;

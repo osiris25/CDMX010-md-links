@@ -6,8 +6,10 @@ const getLinks = (archives) => {
 				const urlExtractedMatch =archives.match(expresion);
 				//console.log(urlExtractedMatch);
 			if (urlExtractedMatch) {
-				depuringUrl(urlExtractedMatch);
+				return depuringUrl(urlExtractedMatch);
 				}
 
+
 }
+
 module.exports=getLinks;
