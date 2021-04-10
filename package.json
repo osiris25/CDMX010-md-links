@@ -2,13 +2,11 @@
   "name": "md-links",
   "version": "0.1.0",
   "description": "Verifica los links",
-  "entry point": "index.js",
+  "bin":"./cliMdLinks.js",
   "scripts": {
-    "start": "node index.js",
-		"test": "jest --watch",
-		"eslint": "eslint --ext .js ./ test/",
-		"pretest": "npm run eslint"
-
+    "test": "jest --watch --coverage",
+    "eslint": "eslint --ext .js ./ test/",
+    "pretest": "npm run eslint"
   },
   "author": "Wendy Osiris Rivas Martinez <wendyosi25@gmail.com>",
   "dependencies": {

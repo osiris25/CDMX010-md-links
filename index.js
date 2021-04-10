@@ -1,25 +1,24 @@
+
 const readArchives = require('./readArchives');
 const fs = require('fs');
 const path = require('path');
 
-/* module.exports =  */
-const readDirectory = (archive) => {
-
+ const mdLinks = (archive) => {
 	fs.readdir(archive, (error, files) => {
 		if (error) {
 		} else {
 			files.forEach((doc) => {
 				const extNamePath = path.extname(doc);
 				const newPath = archive + '/' + doc;
-				//console.log("Path", newPath);
+				console.log("Path", newPath);
 				if (extNamePath === '.md') {
-					readArchives(newPath);
+				readArchives(newPath);
 				} else if (extNamePath === '') {
-					readDirectory(newPath);
+					mdLinks(newPath);
 				}
 			});
 			//console.log(files);
 		}
 	});
 }
-readDirectory('./Directorio1');
+module.exports=mdLinks;
